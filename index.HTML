@@ -1,38 +1,117 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
+    <style>
+        body {
+            background: rgb(8, 8, 8);
+            color: rgb(245, 2, 2);
+            padding: 10px;
+            font-family: arial;
+        }
+
+        #all-contents {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* navigation menu */
+        nav {
+            background: rgb(173, 3, 246);
+            margin: 0 auto;
+            display: flex;
+            padding: 10px;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            color: rgb(250, 0, 0);
+            flex: 1;
+            margin: 0;
+        }
+
+        #nav-ul {
+            list-style-image: none;
+        }
+
+        .nav-li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* main container area beneath menu */
+        main {
+            background: rgb(0, 0, 0);
+            display: flex;
+        }
+
+        .sidebar {
+            margin-right: 25px;
+            padding: 10px;
+        }
+
+        .sidebar-img {
+            width: 200px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 15px;
+        }
+
+        #interests {
+            border: 4px rgb(234, 6, 6) ridge;
+            padding: 8px;
+        }
+
+        h2,
+        h3 {
+            margin: 0px;
+        }
+    </style>
     <title>God</title>
 </head>
+
 <body>
-    <div>
+    <!-- All content goes here -->
+    <div id="all-contents">
         <nav>
             <h1>Ragnorka</h1>
-            <ul>
-                <li>
+            <ul id="nav-ul">
+                <li class="nav-li">
                     <a href="index.html"> Home </a>
                 </li>
-                
+                <li class="nav-li">
+                    <a href="portfolio.html"> Portfolio </a>
+                </li>
             </ul>
         </nav>
         <main>
-            <div>
+            <!-- sidebar-->
+            <div class="sidebar">
+                <img "sidebar-img"
+                    src="data:image/jpeg;base64,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">
                 <h2>Prasie</h2>
                 <p>student</p>
-                <!-- interest section -->
-                <div>
-                    <h3>interest</h3>
-                    <ul>
-                        <li>Making music</li>
-                        <li>Gaming</li>
-                        <li>draw</li>
-                    </ul>
-                    <!-- sidebar-->
-                    <div>
-                    <img scr="https://sportshub.cbsistatic.com/i/2021/04/10/50f0cb1b-1092-491c-b271-9f503f8d7886/future-state-gotham-red-hood-header-1255580.jpg">   
-                    </div>
-                </div>
+
+            </div>
+            <!-- interest section -->
+            <div>
+                <h3>interest</h3>
+                <ul>
+                    <li>Making music</li>
+                    <li>Gaming</li>
+                    <li>draw</li>
+                </ul>
             </div>
         </main>
     </div>
 </body>
+
 </html>
