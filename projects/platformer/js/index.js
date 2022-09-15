@@ -7,20 +7,20 @@ $(document).ready(function () {
         game = opspark.createGame(create, update),
         lives = 3;
         
-    function create() {
+    function create () {
         game.opspark.init();
-        
+
         opspark.platform.factory(game);
         opspark.platform.init(game);
-        
+
         opspark.collectable.factory(game);
         opspark.collectable.init(game);
-        
+
         opspark.cannon.factory(game);
         opspark.cannon.init(game);
-        
+
         opspark.player.init(game);
-        
+
         const textOpts = { fontSize: '32px', fill: '#000' };
         game.score = game.add.text(16, 16, 'Score: 0', textOpts);
         game.lives = game.add.text(16, 70, 'Lives: ' + lives, textOpts);
@@ -64,3 +64,4 @@ $(document).ready(function () {
     }
 
 });
+
