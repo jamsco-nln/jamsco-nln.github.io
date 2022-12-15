@@ -26,7 +26,7 @@ var init = function (window) {
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas, 10, 10);
+            physikz.addRandomVelocity(circle, canvas, 100, 10);
             view.addChild(circle);
             circles.push(circle);
     }
@@ -50,12 +50,13 @@ var init = function (window) {
             // TODO 4 : Update the circle's position //
             for(var i = 0; i < circles.length;i++){
                 var eachCircle = circles[i];
-                physikz.updatePosition([eachCircle]);
+                physikz.updatePosition(eachCircle);
+                game.checkCirclePosition(eachCircle);
             }
             
            
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           game.checkCirclePosition([eachCircle]);
+           
 
 
             // TODO 9 : Iterate over the array
@@ -82,14 +83,14 @@ var init = function (window) {
             if(circle.y > canvas.height){
                 circle.y = 0;
             }
-            //why do i need this, to try to stop the xircles from going off the right side
-            if(circle.x < 0){
-                circle.x = 0;
-            }
+            //why do i need this, to try to stop the circles from going off the right side
+             if(circle.x < 0){
+                 circle.x = canvas.width
+             }
 
             //Now this is to block the top side from the circles and use 0nto push it back in orginal position
             if(circle.y < 0){
-                circle.y = 0;
+                circle.y = canvas.height
             }
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
