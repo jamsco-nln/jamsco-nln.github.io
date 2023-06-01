@@ -1,0 +1,38 @@
+Discribing The game play it will consist of two paddles whacking a ball back n forward between these paddles.
+Until one player manages to get the ball pass the other persons paddle gaining a point the game will countiue until one player gets 11 points resulting in the other player losing.
+
+
+the conditions when the game begins if the ball hits a paddle bounce off of the paddle same for the other paddle.
+Another condition that will be set is the boarder to stop the ball from no clipping threw the walls of the game walls instead bouncing off the wall so the ball can stay in the box.
+
+
+Yes the game does has a end, The said condition for the end of the game will be if the amount of points needed are achieved display the winners name with you win sign.
+As well as paddles lock in position waiting for the game to start again to countiue.
+
+If ball hits the top or bottom wall it bounces off of the surface.
+If the ball hits the top or bottom increase in speed,
+If the ball hits the paddle increase in speed.
+If the ball goes passed the right or left a point goes to that player.
+
+
+
+Visual game components will consist of two different colored paddles for each other player.
+The static component will be the board its not moving n top n bottom boundary.
+What will be animated is the player 1 and 2's paddles as well as the ball they will be bouncing between them.
+The data I will need to manage these components are simple labels like position X and Y , speed X speed Y and boarder X boarder Y.
+
+
+What events will be happening in this game are handleKeys and Clickevents.
+handleKey to move each paddle on opposite sides two different controls.
+Clickevents to start said game also to replay the game when on player wins.
+
+On the document use handleKeyDown to allow us to use are paddles n let it move up aswell as down.
+handleKeyUp to let the program know that the key has been releasedso it can stop moving.
+Clickevent is gonna be used to start the game of pong so we can click play n have it resgister on the document.
+Also to replay the game when it does end when player gets 11 points.
+
+
+
+
+
+
